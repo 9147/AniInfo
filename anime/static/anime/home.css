@@ -24,7 +24,7 @@ input[type=search] {
     margin-left:30px;
 	padding: 9px 10px 9px 50px;
 	width: 55%;
-	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	background: #000000 url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
 	border: solid 1px #ccc;
 	
 	-webkit-border-radius: 10em;
