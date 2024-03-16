@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniInfo</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    
+    {% block head %}
+    {% endblock head %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="header">AniInfo</div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+    <script type="text/javascript" src="{% static 'jquery-3.7.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'base.js' %}"></script>
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'anime/home.css' %}" />
+{% endblock %} {% block content %}
+<div class="outer-container">
+  <div class="container">
+    {% csrf_token %}
+    <div class="inner-container">
+      <input type="search" placeholder="Search" id="search" onfocus="hideResult()"/>
+      <div class="radio-buttons">
+        <span>
+          <input type="radio" id="anime" name="type" value="anime" checked />
+          <label for="anime">Anime</label>
+        </span>
+        <span>
+          <input type="radio" id="manga" name="type" value="manga" />
+          <label for="manga">Manga</label>
+        </span>
+        <span>
+          <input type="radio" id="character" name="type" value="character" />
+          <label for="character">Character</label>
+        </span>
+      </div>
+      <a href="{% url 'anime:search' %}" class="filter-search">Search Anime's by filters</a>
+    </div>
+  </div>
+  <div class="holder" id="holder">
+    <img src="" class="banner" id="banner" alt="" />
+    <div class="card-cover">
+      <div class="card">
+        <img src="" id="cover" alt="" />
+      </div>
+      <div class="info">
+        <div class="top-info">
+          <h1 id="title"></h1>
+          <div id="date">
+            <span id="start-date"></span>
+            <span id="end-date"></span>
+          </div>
+        </div>
+        <p id="description"></p>
+        <div class="info-container" id="info-container">
+          <div class="info-box">
+            <h3>Rating:</h3>
+            <h3 id="rating"></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+<div class="loading">
+    <div class="loadingWrapper">
+      <div id="loading"> </div>
+      <h1 class="load-text">Loading . . .</h1>
+    </div>
+  </div>
+{% endblock %}
+ {% block scripts %}
+  <script type="text/javascript" src="{% static 'anime/home.js' %}"></script>
+{% endblock %}
