@@ -83,6 +83,7 @@ input[type=search]:focus {
   align-items: center;
 }
 .radio-buttons label {
+  color: white;
   margin-right: 1rem;
   font-size: 1.2rem;
   cursor: pointer;

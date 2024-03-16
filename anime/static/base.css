@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
 }
-.header{
+.header {
+    color: white;
     font-family: cursive;
     font-size: 50px;
 }
