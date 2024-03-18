@@ -1,10 +1,57 @@
 {% extends 'base.html' %} {% load static %} {% block head %}
 <link rel="stylesheet" href="{% static 'anime/search.css' %}" />
 {% endblock %} {% block content %}
-
-<div>there is nothing here</div>
-
+<div class="search-holder-container">
+<div class="filter-outer">
+<div class="filter-container">
+    <div class="row">
+        <div class="year-container">
+            <div>Year: </div>
+            <div class="year">
+                <input name="startYear" id="startYear" class="date-picker-year year-field" value="1924" min="1924"/>
+                <div>to</div>
+                <input name="startYear" id="endYear" class="date-picker-year year-field" value="2023"/>
+            </div>
+        </div>
+        <div class="rating-container">
+            <div>Rating: </div>
+            <div class="rating">
+                <input id="startRating" type="number" max="100" min="0" value="0">
+                <div>to</div>
+                <input id="endRating" type="number" max="100" min="0" value="100">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <input type="search" id="search_genres" placeholder="Add Genre">
+        <div id="suggestionBox" style="display: none;"></div>
+        <div class="button" onclick="get_data()">Search</div>
+    </div>
+    <div class="row">
+        <div class="genre-outer-container">
+        <div class="genre-container" id="genre-container">No genres selected</div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="result-outer-container">
+    <div class="result-container" id="result-container">
+    </div>
+</div>
+</div>
+<div class="display-container" id="display-container">
+    <img id="back_button" src="media/back_icon.png" alt="back button" onclick="closeAnimeBox()">
+    <div class="anime-cover-container" id="anime-cover-container"><img class="anime-cover" id="anime_cover" src="" ></img></div>
+    <div class="row">
+        <img src="" alt="" class="left-image" id="left_image">
+        <div class="info-box right-box">
+            <div class="anime-title" id="anime_title"></div>
+            <div class="anime-description" id="anime_description">
+        </div>
+    </div>
+</div>
+</div>
 {% endblock %}
- {% block scripts %}
-  <script type="text/javascript" src="{% static 'anime/search.js' %}"></script>
+{% block scripts %}
+<script type="text/javascript" src="{% static 'anime/search.js' %}"></script>
 {% endblock %}

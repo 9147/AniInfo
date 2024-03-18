@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniInfo</title>
     <link rel="stylesheet" href="{% static 'base.css' %}">
+    <script type="text/javascript" src="{% static 'jquery-3.7.1.min.js' %}"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
     {% block head %}
     {% endblock head %}
@@ -16,7 +19,13 @@
     </nav>
     {% block content %}
     {% endblock content %}
-    <script type="text/javascript" src="{% static 'jquery-3.7.1.min.js' %}"></script>
+    <div class="loading">
+        <div class="loadingWrapper">
+          <div id="loading"> </div>
+          <h1 class="load-text">Loading . . .</h1>
+        </div>
+      </div>
+    
     <script type="text/javascript" src="{% static 'base.js' %}"></script>
     {% block scripts %}
     {% endblock scripts %}

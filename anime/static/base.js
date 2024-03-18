@@ -35,3 +35,8 @@ function getCookie(name) {
         }
     });
   }
+
+
+  window.onload = function() {
+    $(".loading").hide();
+  }

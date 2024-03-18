@@ -1,8 +1,5 @@
 var input = document.getElementById("search");
 
-window.onload = function() {
-  $(".loading").hide();
-}
 
 
 // Execute a function when the user presses a key on the keyboard
