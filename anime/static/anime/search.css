@@ -11,11 +11,18 @@
     padding:.2rem;
     box-sizing: content-box;
 }
+h3#anime_title {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: cursive;
+}
 .row {
+    margin: 2rem;
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 .rating{
     display: flex;
@@ -186,9 +193,20 @@ img.left {
     backdrop-filter: blur(7px);
     width: 100%;
     height: calc(100vh - 6rem);
+    overflow:auto;
     position: fixed;
     top: 6rem;
     left: 0;
+}
+.display-inner-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+
 }
 .anime-cover {
     backdrop-filter: blur(10px);
@@ -199,7 +217,7 @@ img.left {
 div#anime-cover-container {
     background-color: rgba(19, 19, 19, 0.84);
     width: 100%;
-    min-height:100px;
+    /* min-height:100px; */
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -229,4 +247,13 @@ div#anime-cover-container {
     .row>div>div{
         font-size:1.5rem;
     }
+    
 }
+
+@media only screen and (max-width: 767px) {
+    /* Add your mobile-specific CSS styles here */
+    .row{
+        flex-direction: column;
+    }
+    /* ... */
+  }

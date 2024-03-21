@@ -179,7 +179,7 @@ function get_data() {
                 var animeCard = document.createElement('div');
                 animeCard.classList.add('anime-card');
                 animeCard.addEventListener('click', function () {
-                    document.getElementById('display-container').style.display = 'flex';
+                    document.getElementById('display-container').style.display = 'block';
                     displayAnime(index);
                 });
                 // Create img element with class "left"
@@ -224,6 +224,9 @@ function displayAnime(index) {
         document.getElementById('anime_cover').src = item.banner_image;
         document.getElementById('anime-cover-container').style.backgroundImage = "url('" + item.banner_image + "')";
     }
+    document.getElementById('left_image').src = item.cover_image;
+    document.getElementById('anime_title').textContent = item.name_romaji + " | " + item.name_english;
+    document.getElementById('anime_description').innerHTML = item.desc;
     console.log(item);
 }
 
